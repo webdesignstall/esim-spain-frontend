@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --body-font-family: "Poppins", "sans-serif";
+    --color-primary-light: #476a92;
+    --color-primary: #28425f;
+    --color-primary-dark: #0d1c2b;
+    --color-gold-light: rgb(245, 206, 133);
+    --color-gold: rgba(192, 157, 94, 1);
+    --color-gold-dark: rgb(153, 118, 53);
+    --color-darken: rgb(38, 38, 38);
+    background-color: black;
+}
+
+body {
+    font-family: var(--body-font-family);
+    background-color: black;
+}
+
+button {
+    background-color: unset;
+}
+
+.none {
+    display: none;
+}
+
+.display-none {
+    display: none;
+}
+
+@layer components {
+}

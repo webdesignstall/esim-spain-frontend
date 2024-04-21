@@ -1,0 +1,46 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// @import "antd/dist/antd.css";
+// @import "./custom-antd";
+@import "./variables";
+
+/* ----------------------------------------
+// Components
+// ---------------------------------------- */
+
+@import "./components/layout/app-layout";
+@import "./components/icon";
+@import "./components/chatbot/chatbot";
+@import "./components/slider/slick-slider";
+@import "./components/block/block";
+
+/* ----------------------------------------
+// Pages
+// ---------------------------------------- */
+
+@import "./pages/home-page";
+@import "./pages/layout";
+
+/* ----------------------------------------
+// D-Component
+// ---------------------------------------- */
+// @import "../../node_modules/d-react-components/dist/index.css";
+@import "~d-react-components/dist/dcomponent.es.scss";
+
+/* ----------------------------------------
+// Common
+// ---------------------------------------- */
+
+@import "./common/base";
+@import "./common/text";
+
+// @import "./components/button";
+// @import "./components/tab-bar";
+@import "./components/select";
+// @import "./components/modal/modal";
+// @import "./components/input/input-color";
+// @import "./components/input/input-drop";
+// @import "./components/input/input-text";
+
+@import "./custom";
+@import "./app-style";
