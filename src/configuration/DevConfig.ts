@@ -1,8 +1,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 export default {
-    DOMAIN: process.env.REACT_APP_DEV_DOMAIN,
-    API_BASE_URL: `${process.env.REACT_APP_API_BASE}/graphql`,
+    DOMAIN: process.env.NEXT_PUBLIC_DEV_DOMAIN,
+    API_BASE_URL: `${process.env.NEXT_PUBLIC_DEV_API_BASE}/graphql`,
     // API_BASE_URL: "https://api.piratemobile.gg/graphql",
     GOOGLE_CLIENT_ID:
         "1060585065695-kl1dpg1pv18kq6vvuqsjos19laptjc9g.apps.googleusercontent.com",
