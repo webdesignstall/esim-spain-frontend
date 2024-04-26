@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
-    DOMAIN: process.env.REACT_APP_DOMAIN,
-    API_BASE_URL: `${process.env.REACT_APP_API_BASE}/graphql`,
+    DOMAIN: process.env.NEXT_PUBLIC_DOMAIN,
+    API_BASE_URL: `${process.env.NEXT_PUBLIC_API_BASE}/graphql`,
     GOOGLE_CLIENT_ID:
         process.env.GOOGLE_CLIENT_ID ||
         "596252792983-lkfvcj3ksq85c1h5b8tsgie5lrr7jp4o.apps.googleusercontent.com",
