@@ -8,7 +8,7 @@ import { IoMdCheckmark } from "react-icons/io";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useCurrency } from "../../contexts/CurrencyProvider";
-import { convertPrice } from "../../utils/convertPrice";
+import PriceConverter from "../../utils/convertPrice";
 import { useContext, useMemo } from "react";
 import { AppStateContext } from "@/common/context/app/app-context";
 import { useSearchParam } from "react-use";
@@ -107,7 +107,8 @@ const PackageCard = ({ pack, country }) => {
             <span>Price</span>
           </div>
           <div className="font-medium">
-            <span>{convertPrice(pack?.salePrice, currency)}</span>
+            <PriceConverter price={pack?.salePrice} />
+            {/* <span>{convertPrice(, currency)}</span> */}
           </div>
         </div>
 
