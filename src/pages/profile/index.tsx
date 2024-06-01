@@ -1,16 +1,17 @@
-import ProfilePage from "@/container/profile/ProfilePage";
-import { LayoutAuth } from "@/container/shared/layout/Layout";
-import React from "react";
+import ProfileLayout from "@/container/layouts/ProfileLayout";
+import ProfilePage from "@/container/profile";
+import { ReactElement } from "react";
 
-export interface IProfileProps {
-    [key: string]: any;
-}
-
-const Profile: React.FC<IProfileProps> = ({ id }) => {
-    return <ProfilePage />;
+const Profile = () => {
+  return (
+    <div>
+      <ProfilePage />
+    </div>
+  );
 };
 
 export default Profile;
 
-//@ts-ignore
-Profile.Layout = LayoutAuth;
+Profile.getLayout = function (page: ReactElement) {
+  return <ProfileLayout>{page}</ProfileLayout>;
+};
