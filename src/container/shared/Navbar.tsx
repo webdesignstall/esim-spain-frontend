@@ -1,53 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useContext, useEffect, useRef, useState } from "react";
 import bars from "../../assets/icons/NavBars.svg";
 import Link from "next/link";
 import Image from "next/image";
-import { FaUser, FaAngleDown } from "react-icons/fa";
-import { LiaFlagUsaSolid } from "react-icons/lia";
-import { useCurrency } from "../../contexts/CurrencyProvider";
+import { FaUser } from "react-icons/fa";
 import { useAuthProfile } from "../../store/auth/authHook";
-
-const items = [
-  {
-    key: "1",
-    label: "USD",
-    icon: <LiaFlagUsaSolid />,
-  },
-  {
-    key: "2",
-    label: "THB",
-    icon: <LiaFlagUsaSolid />,
-  },
-  {
-    key: "3",
-    label: "VND",
-    icon: <LiaFlagUsaSolid />,
-  },
-  {
-    key: "4",
-    label: "CAD",
-    icon: <LiaFlagUsaSolid />,
-  },
-  {
-    key: "5",
-    label: "EUR",
-    icon: <LiaFlagUsaSolid />,
-  },
-];
+import CurrencySwitcher from "./CurrencySwitcher";
+import { useState } from "react";
 
 const Navbar = () => {
-  const [selectedCountry, setSelectedCountry] = useState(items[0]);
-  const [dropdown, setDropdown] = useState(false);
-  const [showMenuItem, setShowMenuItem] = useState(false);
-  const { setCurrency }: any = useCurrency();
   const user = useAuthProfile();
-
-  const handleSelectCountry = (country: any) => {
-    setCurrency(country.label);
-    setSelectedCountry(country);
-    setDropdown(false);
-  };
+  const [showMenuItem, setShowMenuItem] = useState(false);
 
   return (
     <nav className="lg:flex justify-between items-center text-white 2xl:px-20 px-3 py-4">
@@ -76,38 +38,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-5 -mt-4">
         <div className="relative lg:block hidden">
-          <button
-            onClick={() => setDropdown((prev) => !prev)}
-            className="flex items-center gap-2"
-            type="button"
-          >
-            <span className="text-2xl rounded-full">
-              {selectedCountry.icon}
-            </span>
-            <span>{selectedCountry.label}</span>
-            <span>
-              <FaAngleDown />
-            </span>
-          </button>
-          {dropdown && (
-            <div className="absolute top-8 bg-white text-black  rounded-md">
-              {items.map((item) => (
-                <button
-                  key={item.key}
-                  onClick={() => handleSelectCountry(item)}
-                  className="flex items-center py-2 px-5 gap-2 hover:bg-gray-100 hover:rounded-md"
-                  type="button"
-                >
-                  <span className="text-2xl rounded-full">{item.icon}</span>
-                  <span>{item.label}</span>
-                </button>
-              ))}
-            </div>
-          )}
+          <CurrencySwitcher />
         </div>
-
         <div className="lg:block hidden">
           {user?.avatar ? (
             <Link href={"/profile"}>
