@@ -109,7 +109,7 @@ const SelectPaymentView: React.FC<ISelectPaymentViewProps> = ({
         if (!actions?.order) {
             return Promise.reject();
         }
-        return actions.order
+        return actions?.order
             .capture()
             .then((details: any) => {
                 const name = details?.payer?.name?.given_name;
