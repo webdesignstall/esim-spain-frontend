@@ -48,8 +48,8 @@ type Props = {
 };
 
 const OrderHistory = ({ orderList }: Props) => {
-  console.log({ orderList });
-  return (
+
+  /*return (
     <div className="flex flex-col gap-3 mt-5">
       {orders.map((order) => (
         <div
@@ -75,7 +75,11 @@ const OrderHistory = ({ orderList }: Props) => {
         </div>
       ))}
     </div>
-  );
+  );*/
+
+  return(
+      <></>
+  )
 };
 
 export default OrderHistory;

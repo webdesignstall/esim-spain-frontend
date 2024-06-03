@@ -20,10 +20,10 @@ const ESims = ({ orderList }: Props) => {
     return filteredOrders;
   }, [orderList]);
 
-  console.log({ yourEsims });
+  // console.log({ yourEsims });
   return (
     <div className="mt-4">
-      <h3 className="text-white">E sims list</h3>
+      {/*<h3 className="text-white">E sims list</h3>*/}
     </div>
   );
 };

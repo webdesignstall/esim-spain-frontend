@@ -3,12 +3,12 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { FaHistory } from "react-icons/fa";
 import { RiCoupon2Fill } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
-import { useAuthProfile } from "../../store/auth/authHook";
+import { useAuthProfile } from "@/store/auth/authHook";
 import { signOut } from "next-auth/react";
 import { useDispatch } from "react-redux";
 import { signOutAction } from "@/store/auth/authActions";
 
-const Sidebar = () => {
+const Sidebar = ({setSidebar, sidebar}: {setSidebar : any, sidebar: number}) => {
   const user = useAuthProfile();
   const dispatch = useDispatch();
   console.log({ user });
@@ -26,8 +26,9 @@ const Sidebar = () => {
         </div>
         <div className="mt-3 grid grid-cols-1 gap-4 w-full">
           <Button
+            onClick={ () => setSidebar(0)}
             style={{
-              backgroundColor: "#C09D5E",
+              backgroundColor: `${sidebar === 0 ? '#C09D5E' : '#454545'}`,
               padding: "32px 10px",
               display: "flex",
               justifyContent: "space-between",
@@ -45,8 +46,9 @@ const Sidebar = () => {
             <IoIosArrowForward />
           </Button>
           <Button
+            onClick={() => setSidebar(1)}
             style={{
-              backgroundColor: "#454545",
+              backgroundColor: `${sidebar === 1 ? '#C09D5E' : '#454545'}`,
               padding: "32px 10px",
               display: "flex",
               justifyContent: "space-between",
@@ -64,8 +66,9 @@ const Sidebar = () => {
             <IoIosArrowForward />
           </Button>
           <Button
+            onClick={() => setSidebar(2)}
             style={{
-              backgroundColor: "#454545",
+              backgroundColor: `${sidebar === 2 ? '#C09D5E' : '#454545'}`,
               padding: "32px 10px",
               display: "flex",
               justifyContent: "space-between",

@@ -2,11 +2,11 @@ import React from "react";
 import { IoLogoBitcoin } from "react-icons/io5";
 import { useCurrency } from "@/contexts/CurrencyProvider";
 
-const PriceConverter = ({ price }: { price: number }) => {
+const PriceConverter = ({ price }: { price: any }) => {
   const { exchangeRates, currency }: any = useCurrency();
 
-  const convertPrice = (price: number) => {
-    const convertedPrice = price * exchangeRates[currency];
+  const convertPrice = (price: any) => {
+    const convertedPrice = Number(price) * exchangeRates[currency];
     let formattedPrice: any = new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: currency,
@@ -39,7 +39,7 @@ const PriceConverter = ({ price }: { price: number }) => {
     return formattedPrice;
   };
 
-  return <small>{convertPrice(price)}</small>;
+  return <small>{convertPrice(price) ? convertPrice(price)  : ''}</small>;
 };
 
 export default PriceConverter;

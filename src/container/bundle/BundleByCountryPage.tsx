@@ -18,6 +18,7 @@ import PageHeader from "../shared/header/PageHeader";
 import PriceTag from "../shared/items/PriceTag";
 import { useSearchParam } from "react-use";
 import AppLink from "@/components/link/AppLink";
+import PriceConverter from "@/utils/convertPrice";
 
 export interface IBundleByCountryPageProps {
     countryCode: string;
@@ -170,6 +171,7 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
     showRadio = true,
     className,
 }) => {
+
     const { provider, dataAmount, duration, salePrice, bundleData, id } =
         bundle || {};
     const { speed } = bundleData || {};
@@ -285,10 +287,11 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
                             size={16}
                             className="mr-2 text-gold"
                         />
-                        <PriceTag
+                        <PriceConverter price={salePrice}/>
+                        {/*<PriceTag
                             className="font-medium text"
                             price={salePrice}
-                        />
+                        />*/}
                     </div>
                 </div>
             </BundleItemStyled>
@@ -362,7 +365,8 @@ export const BundleDetailModal: React.FC<IBundleDetailModalProps> = ({
                             size={16}
                             className="mr-2 text-gold"
                         />
-                        <PriceTag price={salePrice} />
+
+                        <PriceConverter price={salePrice}/>
                     </div>
                     {speed?.length && (
                         <div className={rowClass}>
