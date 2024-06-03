@@ -33,7 +33,7 @@ const PackageFilterable = ({ setPackageType, packages }: Props) => {
     <>
       {/* larger devices  */}
       <div className="lg:block hidden">
-        <div className="text-white lg:w-1/2 w-full mx-auto text-base font-medium flex justify-between gap-3 bg-[#69645E] rounded-full p-2">
+        <div className="text-white lg:w-2/5 w-full mx-auto text-base font-medium flex justify-between gap-3 bg-[#69645E] rounded-full p-2">
           {packagesFilter?.map((pkg) => (
             <div key={pkg}>
               <button

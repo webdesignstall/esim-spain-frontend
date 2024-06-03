@@ -152,7 +152,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
   const renderAgreement = () => {
     return (
       <div className="bg-black mt-4 p-4 rounded-2xl border border-gold checkout-page__agreement">
-        <div className="flex-center-y">
+       {/* <div className="flex-center-y">
           <Checkbox
             onChange={() =>
               setUserAgreement({
@@ -178,7 +178,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
               <span>{Messages.thePrivacyPolicy}</span>
             </AppLink>
           </div>
-        </div>
+        </div>*/}
         <div className="flex-center-y mt-3">
           <Checkbox
             onChange={() =>
@@ -248,7 +248,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
         {map(userCart, (item, index) => {
           return <BundleItem bundle={item} showRadio={false} />;
         })}
-        {/* {renderAgreement()} */}
+         {renderAgreement()}
         {/* {totalAmount > 0 && (
                     <SelectPaymentButton
                         totalAmount={totalAmount}
@@ -263,7 +263,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
                         purchasingItems={userCart}
                     />
                 )} */}
-        {totalAmount > 0 && (
+        {userAgreement?.compatible  && (
           <SelectPaymentView
             totalAmount={totalAmount}
             onSuccess={(orderRes, orderSer) => {
@@ -272,7 +272,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
                 setPaymentOrder(orderRes);
               }
             }}
-            onError={(error: any) => {}}
+            onError={(error: any) => {console.log(error)   }}
             customerId={customerId}
             purchasingItems={userCart}
           />

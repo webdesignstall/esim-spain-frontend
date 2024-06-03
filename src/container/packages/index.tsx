@@ -24,16 +24,16 @@ const PackageList = ({ bundles, countryCode }: Props) => {
 
   useEffect(() => {
     if (packageType === "Regular") {
-      const packs = packages?.filter((pack) => pack?.duration > 0);
+      const packs = packages?.filter((pack) => !pack?.bundleData?.unlimited);
       setFilterPackages(packs);
     } else if (packageType === "Unlimited") {
-      const packs = packages?.filter((pack) => pack?.dataAmount < 0);
+      const packs = packages?.filter((pack) => pack?.bundleData?.unlimited );
       setFilterPackages(packs);
     } else if (packageType === "All") {
       setFilterPackages([]);
     } else {
       const filterType = Number(packageType.split(" ")[0]);
-      const packs = packages?.filter((pack) => pack?.duration === filterType);
+      const packs = packages?.filter((pack) => !pack?.bundleData?.unlimited);
       setFilterPackages(packs);
     }
   }, [packageType, packages]);
