@@ -33,3 +33,6 @@ button {
 
 @layer components {
 }
+.currency-hover:hover span.inline-block {
+    text-decoration: underline;
+}
