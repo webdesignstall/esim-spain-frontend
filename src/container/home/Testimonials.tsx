@@ -58,7 +58,7 @@ const Testimonials = () => {
                 <div>
                   <div className="mb-2 flex justify-between items-center">
                     <div>
-                      <h4 className="text-white text-xs">{item.user.name}</h4>
+                      <h4 className="text-white text-[16px]">{item.user.name}</h4>
                       <span className="text-gray-400 text-[14px]">
                         {item.user.designation}
                       </span>
@@ -68,7 +68,7 @@ const Testimonials = () => {
                     </div>
                   </div>
                   <div
-                    className="text-white text-xs leading-6 flex flex-col gap-2"
+                    className="text-white text-[16px] leading-6 flex flex-col gap-2"
                     dangerouslySetInnerHTML={{ __html: `“${item.review}”` }}
                   ></div>
                 </div>
@@ -92,14 +92,14 @@ const Testimonials = () => {
             <div>
               <div className="mb-2 flex justify-between items-center">
                 <div>
-                  <h4 className="text-white text-xs">
+                  <h4 className="text-white text-[16px]">
                     {largestReview.user.name}
                   </h4>
                   <span className="text-gray-400 text-[14px]">
                     {largestReview.user.designation}
                   </span>
                 </div>
-                <div className="text-white text-xl">
+                <div className="text-white text-[16px]">
                   <largestReview.user.platform />
                 </div>
               </div>
@@ -131,19 +131,19 @@ const Testimonials = () => {
                 <div>
                   <div className="mb-2 flex justify-between items-center">
                     <div>
-                      <h4 className="text-white text-xs">
+                      <h4 className="text-white text-[16px]">
                         {item.user.name} {item.review?.length}
                       </h4>
                       <span className="text-gray-400 text-[14px]">
                         {item.user.designation}
                       </span>
                     </div>
-                    <div className="text-white text-xl">
+                    <div className="text-white text-[14px]">
                       <item.user.platform />
                     </div>
                   </div>
                   <div
-                    className="text-white text-xs flex flex-col gap-2"
+                    className="text-white text-[16px] flex flex-col gap-2"
                     dangerouslySetInnerHTML={{ __html: `“${item.review}”` }}
                   ></div>
                 </div>

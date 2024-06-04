@@ -15,9 +15,7 @@ const CountrySection = ({ countries }: { countries: any[] }) => {
         Millions of People Stay Connected <br /> With Data eSims for 190+
         Countries
       </h2>
-      <h2 className="lg:text-5xl text-3xl lg:leading-[60px] font-medium text-white text-center mb-24">
-        Popular Countries
-      </h2>
+
       <CountryContainer countries={countries} />
       <div className="flex justify-center items-center">
         <Link href={"/countries"}>
