@@ -23,10 +23,10 @@ const VerticalUITimeline = () => {
               )}
             </TimelineSeparator>
             <TimelineContent className="py-20 -mt-20">
-              <h3 className="text-[28px] lg:w-[520px] w-full mb-3 leading-8">
+              <h3 className="text-[28px] lg:w-[520px] w-full mb-3 leading-8 text-white">
                 {item?.title}
               </h3>
-              <h5 className="text-[16px] text-[#D2D2D2]">
+              <h5 className="text-[14px] text-[#D2D2D2]">
                 {item?.description}
               </h5>
             </TimelineContent>
