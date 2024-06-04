@@ -1,34 +1,43 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useCurrency } from "@/contexts/CurrencyProvider";
-import React, { useState, useEffect } from "react";
-import { LiaFlagUsaSolid } from "react-icons/lia";
+import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
+
+
+
+const flagMapping = {
+  USD: "/icons/usa-flag-circular.svg",
+  THB: "/icons/thailand-flag-circular.svg",
+  VND: "/icons/vietnam-flag-circular.svg",
+  CAD: "/icons/canada-flag-circular.svg",
+  EUR: "/icons/european-union-flag-circular.svg",
+};
 
 const items = [
   {
     key: "1",
     label: "USD",
-    icon: <LiaFlagUsaSolid />,
+    icon: flagMapping.USD,
   },
   {
     key: "2",
     label: "THB",
-    icon: <LiaFlagUsaSolid />,
+    icon: flagMapping.THB,
   },
   {
     key: "3",
     label: "VND",
-    icon: <LiaFlagUsaSolid />,
+    icon: flagMapping.VND,
   },
   {
     key: "4",
     label: "CAD",
-    icon: <LiaFlagUsaSolid />,
+    icon: flagMapping.CAD,
   },
   {
     key: "5",
     label: "EUR",
-    icon: <LiaFlagUsaSolid />,
+    icon: flagMapping.EUR,
   },
 ];
 
@@ -42,36 +51,46 @@ const CurrencySwitcher = () => {
     setSelectedCountry(country);
     setDropdown(false);
   };
-
   return (
-    <>
-      <button
-        onClick={() => setDropdown((prev) => !prev)}
-        className="flex items-center gap-2 border rounded-md px-2 py-1"
-        type="button"
-      >
-        <span className="text-2xl rounded-full">{selectedCountry.icon}</span>
-        <span>{selectedCountry.label}</span>
-        <span>
-          <FaAngleDown />
+      <>
+        <button
+            onClick={() => setDropdown((prev) => !prev)}
+            type="button"
+            className={'flex gap-1 items-center cursor-pointer'}
+        >
+            <span>
+              <img className="w-7 h-7 object-contain"  src={selectedCountry.icon} alt={selectedCountry.label} />
+              </span>
+            <span className={'text-md inline-block ml-1'}>{selectedCountry.label}</span>
+
+          <span>
+          <FaAngleDown/>
         </span>
-      </button>
-      {dropdown && (
-        <div className="absolute top-10 bg-white text-black rounded-md">
-          {items.map((item) => (
-            <button
-              key={item.key}
-              onClick={() => handleSelectCountry(item)}
-              className="flex items-center py-2 px-4 gap-2 hover:bg-gray-100 hover:rounded-md"
-              type="button"
-            >
-              <span className="text-2xl rounded-full">{item.icon}</span>
-              <span>{item.label}</span>
-            </button>
-          ))}
-        </div>
-      )}
-    </>
+        </button>
+        {dropdown && (
+            <div className="absolute top-9">
+              {
+                items.map((item) => {
+                  return (
+                      <button
+                          key={item.key}
+                          onClick={() => handleSelectCountry(item)}
+                          className="flex gap-1 items-center mb-2 justify-center cursor-pointer currency-hover"
+                          type="button"
+                      >
+                      <span>
+                        <img className="w-7 h-7 object-contain" src={item.icon} alt={item.label} />
+                      </span>
+                        <span className="text-md inline-block ml-1">{item.label}</span>
+                      </button>
+                  )
+                })
+
+
+              }
+            </div>
+        )}
+      </>
   );
 };
 

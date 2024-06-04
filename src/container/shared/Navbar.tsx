@@ -25,16 +25,7 @@ const Navbar = () => {
             <Link href={"/"}>Home</Link>
           </li>
           <li>
-            <Link href={"/about"}>About us</Link>
-          </li>
-          <li>
-            <Link href={"/packages"}>Packages</Link>
-          </li>
-          <li>
-            <Link href={"/logs"}>Blog</Link>
-          </li>
-          <li>
-            <Link href={"/contact"}>Contact us</Link>
+            <Link href={"/blog"}>Blogs</Link>
           </li>
         </ul>
       </div>
@@ -89,17 +80,9 @@ const Navbar = () => {
                       <Link href={"/"}>Home</Link>
                     </li>
                     <li>
-                      <Link href={"/about"}>About us</Link>
+                      <Link href={"/blog"}>Blogs</Link>
                     </li>
-                    <li>
-                      <Link href={"/packages"}>Packages</Link>
-                    </li>
-                    <li>
-                      <Link href={"/logs"}>Blog</Link>
-                    </li>
-                    <li>
-                      <Link href={"/contact"}>Contact us</Link>
-                    </li>
+
                     <li>
                       <Link href={"/auth"}>Login/Register</Link>
                     </li>

@@ -38,8 +38,6 @@ const CurrencyProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  console.log(exchangeRates);
-  console.log(currency);
 
   useEffect(() => {
     fetchExchangeRates();
