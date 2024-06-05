@@ -23,8 +23,8 @@ const Testimonials = () => {
     .slice(-2);
 
   return (
-    <div className="custom-continer-inner pt-20 pb-60 flex flex-col gap-10">
-      <div>
+    <div className="custom-continer-inner pt-28 pb-60 flex flex-col gap-10">
+      <div className={'mb-14'}>
         <h2 className="lg:text-[45px] text-2xl text-center  text-[#FFFFFF] font-medium  leading-[1.3em]">
           What Our Customers Say <br /> About Piratemobile
         </h2>

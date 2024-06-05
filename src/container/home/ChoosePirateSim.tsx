@@ -4,7 +4,7 @@ import PirateMobileChooseCard from "../cards/PirateMobileChooseCard";
 
 const ChoosePirateSim = () => {
   return (
-    <div className="mt-20 bg-black mx-auto p-5">
+    <div className="mt-28 bg-black mx-auto p-5">
         <div className={'custom-continer-inner'}>
 
       <div>
