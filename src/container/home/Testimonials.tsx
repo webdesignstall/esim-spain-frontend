@@ -23,18 +23,18 @@ const Testimonials = () => {
     .slice(-2);
 
   return (
-    <div className="2xl:max-w-[70%] lg:max-w-[90%] mx-auto px-5 pt-20 pb-60 flex flex-col gap-10">
-      <div className="flex justify-between items-center">
-        <h2 className="lg:text-[45px] text-2xl text-center lg:w-1/2 text-[#FFFFFF] font-medium  lg:leading-[50px]">
-          What Our Customers Have to Say About Piratemobile
+    <div className="custom-continer-inner pt-20 pb-60 flex flex-col gap-10">
+      <div>
+        <h2 className="lg:text-[45px] text-2xl text-center  text-[#FFFFFF] font-medium  leading-[1.3em]">
+          What Our Customers Say <br /> About Piratemobile
         </h2>
-        <div className="lg:flex lg:w-1/2 justify-end items-center">
-          <div className="lg:block hidden">
-            <button className="bg-[#C09D5E] rounded-full font-medium px-6 py-3 flex gap-2 items-center text-white">
-              Read More Reviews
-            </button>
-          </div>
-        </div>
+        {/*<div className="lg:flex lg:w-1/2 justify-end items-center">*/}
+          {/*<div className="lg:block hidden">*/}
+          {/*  <button className="bg-[#C09D5E] rounded-full font-medium px-6 py-3 flex gap-2 items-center text-white">*/}
+          {/*    Read More Reviews*/}
+          {/*  </button>*/}
+          {/*</div>*/}
+        {/*</div>*/}
       </div>
       <div className="lg:block hidden">
         <div className="flex justify-between gap-5 h-full">

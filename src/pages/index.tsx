@@ -2,8 +2,6 @@ import MetaDataApi from "@/apis/meta-data/MetaDataApi";
 import { popularCountryCodes } from "@/constants/popularCountryList";
 import HomePage from "@/container/home/HomePage";
 import HomePageLayout from "@/container/layouts/HomePageLayout";
-import Layout from "@/container/shared/layout/Layout";
-import type { NextPage } from "next";
 import { ReactElement } from "react";
 
 declare const VALID_LAYOUT_VALUES: readonly [

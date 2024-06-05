@@ -8,7 +8,7 @@ import { ReactNode } from "react";
 
 const HomePageLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="max-w-[1920px] w-full mx-auto">
+    <div>
       <div className="relative lg:h-[800px] h-[400px]">
         <div className="absolute top-0 left-0 right-0 lg:px-20">
           <Navbar />

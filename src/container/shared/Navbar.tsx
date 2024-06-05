@@ -12,7 +12,7 @@ const Navbar = () => {
   const [showMenuItem, setShowMenuItem] = useState(false);
 
   return (
-    <nav className="lg:flex justify-between items-center text-white 2xl:px-20 px-3 py-4">
+    <nav className="custom-continer-fuller lg:flex justify-between items-center text-white 2xl:px-20 px-3 py-4">
       {/* Desktop design  */}
       <div className="lg:block hidden">
         <Link href={"/"}>
