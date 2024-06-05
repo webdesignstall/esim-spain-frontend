@@ -71,19 +71,24 @@ const CurrencySwitcher = () => {
             <div className="absolute top-9">
               {
                 items.map((item) => {
-                  return (
-                      <button
-                          key={item.key}
-                          onClick={() => handleSelectCountry(item)}
-                          className="flex gap-1 items-center mb-2 justify-center cursor-pointer currency-hover"
-                          type="button"
-                      >
+                  if(item.label !== selectedCountry.label){
+                    return (
+                        <button
+                            key={item.key}
+                            onClick={() => handleSelectCountry(item)}
+                            className="flex gap-1 items-center mb-2 justify-center cursor-pointer currency-hover"
+                            type="button"
+                        >
                       <span>
                         <img className="w-7 h-7 object-contain" src={item.icon} alt={item.label} />
                       </span>
-                        <span className="text-md inline-block ml-1">{item.label}</span>
-                      </button>
-                  )
+                          <span className="text-md inline-block ml-1">{item.label}</span>
+                        </button>
+                    )
+                  }
+
+                  return '';
+
                 })
 
 
