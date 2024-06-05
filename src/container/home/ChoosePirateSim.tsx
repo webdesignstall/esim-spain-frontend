@@ -4,7 +4,9 @@ import PirateMobileChooseCard from "../cards/PirateMobileChooseCard";
 
 const ChoosePirateSim = () => {
   return (
-    <div className="mt-20 bg-black 2xl:max-w-[70%] lg:max-w-[90%] w-full mx-auto p-5">
+    <div className="mt-20 bg-black mx-auto p-5">
+        <div className={'custom-continer-inner'}>
+
       <div>
         <h1 className="lg:text-5xl text-3xl mb-3 text-white font-medium text-center">
           Why Choose <br className="lg:hidden block" /> Pirate Mobile eSIM?
@@ -100,6 +102,7 @@ const ChoosePirateSim = () => {
           </div>
         </div>
       </div>
+        </div>
     </div>
   );
 };

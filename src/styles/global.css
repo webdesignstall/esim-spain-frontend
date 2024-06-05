@@ -36,3 +36,27 @@ button {
 .currency-hover:hover span.inline-block {
     text-decoration: underline;
 }
+
+.custom-continer-inner {
+    width: 90%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.custom-continer-fuller {
+    width: 90%;
+    max-width: 1560px;
+    margin: 0 auto;
+}
+.simple-section li::before {
+    padding: 0;
+    flex: inherit;
+}
+.simple-section ul {
+    padding: 0;
+}
+.simple-section .simple-bottom-left {
+    width: 50%;
+}
+.simple-section .simple-bottom-right {
+    width: 42%;
+}

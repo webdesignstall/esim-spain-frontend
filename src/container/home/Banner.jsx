@@ -1,7 +1,7 @@
 import CountrySearchComponent from "../countries/CountrySearchComponent";
 const Banner = () => {
   return (
-    <header className="flex flex-col lg:justify-start justify-center lg:items-start items-center gap-3 2xl:p-20 p-5">
+    <header className="custom-continer-fuller flex flex-col lg:justify-start justify-center lg:items-start items-center gap-3 2xl:p-20 p-5">
       <p>
         <button className="text-[#C09D5E] bg-slate-700 text-[20px] font-medium  border border-[#C09D5E] rounded-full px-10 py-2">
           For One eSim

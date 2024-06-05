@@ -9,7 +9,7 @@ import { BsChevronDown } from "react-icons/bs";
 
 const VerticalUITimeline = () => {
   return (
-    <div className="w-full flex flex-col justify-between items-center gap-10">
+    <div className=" flex flex-col gap-10">
       <Timeline className="w-full">
         {timelineData?.map((item, index) => (
           <TimelineItem key={index} className="py-1 text-white">
