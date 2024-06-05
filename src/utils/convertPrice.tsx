@@ -39,7 +39,7 @@ const PriceConverter = ({ price }: { price: any }) => {
     return formattedPrice;
   };
 
-  return <small>{convertPrice(price) ? convertPrice(price)  : ''}</small>;
+  return <>{convertPrice(price) ? convertPrice(price)  : ''}</>;
 };
 
 export default PriceConverter;

@@ -15,7 +15,8 @@ import { useSearchParam } from "react-use";
 import Path from "@/common/constant/path";
 import { isValidEsimIccId } from "@/common/interface/bundle";
 
-const PackageCard = ({ pack, country }) => {
+const PackageCard = ({ pack, country, countryCode  }) => {
+
   const router = useRouter();
   const { currency } = useCurrency();
   const { setUserCart } = useContext(AppStateContext);
@@ -45,7 +46,7 @@ const PackageCard = ({ pack, country }) => {
   return (
     <div className="text-white border-slate-500 rounded-lg lg:mr-0 mr-3 bg-[#454545]">
       <div className="overflow-hidden h-[80px] relative">
-        <h4 className="absolute z-50 text-white p-4 text-2xl font-medium">
+        <h4 className="absolute z-50 text-white p-4 text-xl font-medium">
           {pack?.dataAmount < 0 ? (
             <span>Unlimited </span>
           ) : (
@@ -70,7 +71,7 @@ const PackageCard = ({ pack, country }) => {
           <div className="flex items-center gap-2 font-medium">
             <img
               className="w-6 h-6 rounded-full"
-              src={`data:image/png;base64,${country?.flag}`}
+              src={`https://hatscripts.github.io/circle-flags/flags/${countryCode?.toLowerCase()}.svg`}
               alt="country flag"
             />
             <span>{country?.name}</span>
@@ -106,7 +107,7 @@ const PackageCard = ({ pack, country }) => {
             <IoIosPricetag className="text-xl" />
             <span>Price</span>
           </div>
-          <div className="font-medium">
+          <div className="text-[14px]">
             <PriceConverter price={pack?.salePrice} />
             {/* <span>{convertPrice(, currency)}</span> */}
           </div>
@@ -123,11 +124,11 @@ const PackageCard = ({ pack, country }) => {
           </div>
         ) : (
           <div className="flex items-center flex-wrap justify-between">
-            {["Data Only", "No Contracts", "No SIM Cards"].map(
+            {["Data Only", "No Contracts", "No SIM"].map(
               (item, index) => (
                 <div className="flex items-center gap-1" key={index}>
                   <IoMdCheckmark className="text-[#C09D5E] font-bold" />
-                  <span className="text-[#DFDFDF]">{item}</span>
+                  <span className="text-[#DFDFDF] text-[13px]">{item}</span>
                 </div>
               )
             )}
@@ -137,7 +138,7 @@ const PackageCard = ({ pack, country }) => {
         <div>
           <button
             onClick={handleRedirectToCheckout}
-            className="border-2 w-full rounded-full py-2"
+            className="border-2 w-full rounded-full py-2 hover:bg-[#c09d5e]"
           >
             Buy Now
           </button>
