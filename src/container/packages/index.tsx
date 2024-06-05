@@ -84,7 +84,7 @@ const PackageList = ({ bundles, countryCode }: Props) => {
       <div className="flex items-center lg:gap-5 gap-3 justify-center">
         <img
           className="lg:w-16 w-10 lg:h-12 h-8 rounded-lg"
-          src={convertBase64ToImgSource(singleCountry?.flag)}
+          src={`https://flagcdn.com/${countryCode?.toLowerCase()}.svg`}
           alt="country flag"
         />
         <h3 className="text-white lg:text-5xl text-3xl">
@@ -115,6 +115,7 @@ const PackageList = ({ bundles, countryCode }: Props) => {
                       <PackageCard
                         key={pkg?.id}
                         pack={pkg}
+                        countryCode={countryCode}
                         country={singleCountry}
                       />
                     ))
@@ -122,6 +123,7 @@ const PackageList = ({ bundles, countryCode }: Props) => {
                       <PackageCard
                         key={pkg?.id}
                         pack={pkg}
+                        countryCode={countryCode}
                         country={singleCountry}
                       />
                     ))}
