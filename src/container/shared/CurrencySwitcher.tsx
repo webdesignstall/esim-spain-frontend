@@ -6,11 +6,11 @@ import { FaAngleDown } from "react-icons/fa";
 
 
 const flagMapping = {
-  USD: "/icons/usa-flag-circular.svg",
-  THB: "/icons/thailand-flag-circular.svg",
-  VND: "/icons/vietnam-flag-circular.svg",
-  CAD: "/icons/canada-flag-circular.svg",
-  EUR: "/icons/european-union-flag-circular.svg",
+  USD: "https://hatscripts.github.io/circle-flags/flags/us.svg",
+  THB: "https://hatscripts.github.io/circle-flags/flags/th.svg",
+  VND: "https://hatscripts.github.io/circle-flags/flags/vn.svg",
+  CAD: "https://hatscripts.github.io/circle-flags/flags/ca.svg",
+  EUR: "https://hatscripts.github.io/circle-flags/flags/eu.svg",
 };
 
 const items = [

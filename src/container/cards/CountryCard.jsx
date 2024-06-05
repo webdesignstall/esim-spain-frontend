@@ -14,7 +14,8 @@ const CountryCard = ({ country }) => {
               <img
                   style={{border: "8px solid #1F1B17"}}
                   className="w-[100px] h-[100px] rounded-full"
-                  src={`data:image/png;base64,${country?.flag}`}
+                  // src={`data:image/png;base64,${country?.flag}`}
+                  src={`https://hatscripts.github.io/circle-flags/flags/${country.iso?.toLowerCase()}.svg`}
                   alt="country flag"
               />
             </div>
