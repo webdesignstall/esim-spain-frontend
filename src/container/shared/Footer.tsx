@@ -36,7 +36,7 @@ const Footer = () => {
               Guernsey, GY11WA
             </p>
           </div>
-          <div className="lg:w-3/5 flex justify-between lg:gap-20 gap-5">
+          <div className="lg:w-3/5 flex flex-col justify-evenly md:flex-row  md:justify-between md:gap-20 gap-2">
             <div className="mb-2">
               <h3 className="text-[20px] font-medium text-white">
                 Contact us
