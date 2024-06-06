@@ -21,11 +21,11 @@ const PirateMobileChooseCard = ({
       </div>
       <div
         dangerouslySetInnerHTML={{ __html: title }}
-        className={`text-2xl font-medium my-6 ${
+        className={`text-xl md:text-2xl font-medium pt-2 md:pt-0 my-3 md:my-6 ${
           dangerousWidth && `w-[${dangerousWidth}]`
         }`}
       ></div>
-      <p className="text-[#D2D2D2]">{subTitle}</p>
+      <p className="text-[14px] md:text-[16px] text-[#D2D2D2]">{subTitle}</p>
     </div>
   );
 };

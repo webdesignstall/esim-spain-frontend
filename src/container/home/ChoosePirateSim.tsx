@@ -4,14 +4,14 @@ import PirateMobileChooseCard from "../cards/PirateMobileChooseCard";
 
 const ChoosePirateSim = () => {
   return (
-    <div className="mt-28 bg-black mx-auto p-5">
+    <div className=" mt-12 md:mt-28 bg-black mx-auto p-0 md:p-5">
         <div className={'custom-continer-inner'}>
 
       <div>
-        <h1 className="lg:text-5xl text-3xl mb-3 text-white font-medium text-center">
+        <h2 className="text-2xl lg:text-5xl md:text-3xl mb-3 text-white font-medium text-center">
           Why Choose <br className="lg:hidden block" /> Pirate Mobile eSIM?
-        </h1>
-        <p className="lg:text-lg text-[#D2D2D2] text-center">
+        </h2>
+        <p className="text-[14px] lg:text-lg text-[#D2D2D2] text-center">
           Pirate Mobile is trusted by thousands of people around the world !
         </p>
       </div>

@@ -7,7 +7,11 @@ const CountryCard = ({ country }) => {
     return (
 
         <>
-
+            <Link
+                href={`/packages/${
+                    country?.iso
+                }?country=${country?.name?.toLowerCase()}`}
+            >
           <div
               className="bg-[#343230] mt-6 md:mt-0 w-[120px] h-[100px] lg:h-[218px] sm:h-[170px] lg:w-[230px] sm:w-[190px]  lg:pt-0 pt-10 rounded-xl group hover:border-[1px] hover:border-[#8E8E8E] border-[1px] border-[#343230] flex flex-col items-center justify-center px-2 lg:py-7 text-center mb-16 relative">
             <div className="absolute lg:-top-28 -top-20 mb-4 md:mb-20 left-0 w-full h-full flex items-center justify-center">
@@ -27,21 +31,17 @@ const CountryCard = ({ country }) => {
             <div
                 className='flex flex-col items-center justify-center'>
               <div>
-                <Link
-                    href={`/packages/${
-                        country?.iso
-                    }?country=${country?.name?.toLowerCase()}`}
-                >
+
                   <button className="bg-[#FFFFFF69] text-black group-hover:bg-white p-2 rounded-full">
                     <FaChevronRight className={'text-sm sm:text-lg'} />
                   </button>
-                </Link>
+
               </div>
             </div>
 
           </div>
 
-
+            </Link>
         </>
 
 

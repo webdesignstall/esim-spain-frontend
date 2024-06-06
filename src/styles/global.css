@@ -60,3 +60,11 @@ button {
 .simple-section .simple-bottom-right {
     width: 42%;
 }
+@media screen and (max-width: 767px) {
+    .simple-section .simple-bottom-left {
+        width: auto;
+    }
+    .simple-section .simple-bottom-right {
+        width: auto;
+    }
+}

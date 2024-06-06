@@ -14,7 +14,7 @@ const SimpleSteps = () => {
           </h2>
           <p className="text-lg mt-7 text-[#D2D2D2]">To Active Your eSims</p>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center">
           <div className={'simple-bottom-left'}>
             <VerticalUITimeline />
           </div>
