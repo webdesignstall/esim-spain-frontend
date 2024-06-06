@@ -22,7 +22,7 @@ module.exports = {
                 sans: ["Poppins"],
                 poppins: "Poppins",
                 mont: "Montserrat",
-            },
+            }
         },
     },
     plugins: [],
