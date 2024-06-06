@@ -60,11 +60,21 @@ button {
 .simple-section .simple-bottom-right {
     width: 42%;
 }
+.dot-btn {
+    width: 20px !important;
+    height: 20px !important;
+    borderRadius: 50% !important;
+    display: inline-block !important;
+}
 @media screen and (max-width: 767px) {
     .simple-section .simple-bottom-left {
         width: auto;
     }
     .simple-section .simple-bottom-right {
         width: auto;
+    }
+    .dot-btn {
+        width: 16px !important;
+        height: 16px !important;
     }
 }

@@ -10,8 +10,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#1F1B17] lg:py-10 p-5">
-      <div className="custom-continer-inner lg:-mt-32 -mt-20">
+    <footer className=" bg-[#1F1B17] lg:py-10 p-2 md:p-5">
+      <div className="custom-continer-inner pt-10 md:pt-0 lg:-mt-32 -mt-20">
         <div className="lg:block hidden">
           <Link href="/">
             <Image src={logo} alt="Logo" />
@@ -24,7 +24,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="lg:flex justify-between gap-20 py-5">
+        <div className="lg:flex justify-between gap-20 py-5 pb-3">
           <div className="lg:w-2/5">
             <h3 className="text-2xl font-medium text-white mb-4">
               Pirate Mobile Limited
@@ -67,7 +67,7 @@ const Footer = () => {
         <hr className="my-4 text-[#FFFFFF2B] lg:block hidden" />
         <div className="flex lg:flex-row flex-col-reverse justify-between items-center lg:pt-10">
           <div className="text-xs text-white flex lg:flex-row flex-col-reverse justify-between items-center gap-10">
-            <p>
+            <p className={'text-[14px] md:text-[16px]'}>
               &copy; {new Date().getFullYear()}, eSIM Powered by Pirate Mobile
             </p>
             <ul className="flex lg:text-white text-[#BDBAC1] justify-between lg:w-auto w-full gap-10 items-center text-[16px]">

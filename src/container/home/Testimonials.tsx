@@ -23,9 +23,9 @@ const Testimonials = () => {
     .slice(-2);
 
   return (
-    <div className="custom-continer-inner pt-28 pb-60 flex flex-col gap-10">
-      <div className={'mb-14'}>
-        <h2 className="lg:text-[45px] text-2xl text-center  text-[#FFFFFF] font-medium  leading-[1.3em]">
+    <div className="custom-continer-inner pt-20 md:pt-28 pb-28 md:pb-60 flex flex-col gap-10">
+      <div className={'my-1 md:mb-14'}>
+        <h2 className="lg:text-[45px]  text-[18px] md:text-2xl text-center  text-[#FFFFFF] font-medium  leading-[1.5em]  md:leading-[1.3em]">
           What Our Customers Say <br /> About Piratemobile
         </h2>
         {/*<div className="lg:flex lg:w-1/2 justify-end items-center">*/}
@@ -155,13 +155,13 @@ const Testimonials = () => {
       <div className="lg:hidden block">
         <TestimonialSliderCard />
       </div>
-      <div className="flex lg:w-1/2 mt-3 justify-center items-center">
-        <div className="lg:hidden block">
-          <button className="bg-[#C09D5E] rounded-full font-medium px-6 py-3 flex gap-2 items-center text-white">
-            Read More Reviews
-          </button>
-        </div>
-      </div>
+      {/*<div className="flex lg:w-1/2 mt-3 justify-center items-center">*/}
+      {/*  <div className="lg:hidden block">*/}
+      {/*    <button className="bg-[#C09D5E] rounded-full font-medium px-6 py-3 flex gap-2 items-center text-white">*/}
+      {/*      Read More Reviews*/}
+      {/*    </button>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 };
