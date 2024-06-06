@@ -91,7 +91,7 @@ const CountrySearchComponent = () => {
         )}
       </div>
       {/* for smaller devices */}
-      <div className="lg:w-2/6 w-full">
+      <div className="lg:w-2/6 w-full mt-3 md:mt-0">
         <button
           onClick={handleSearchCountry}
           className={`w-full bg-[#C09D5E] py-2 rounded-full ${
