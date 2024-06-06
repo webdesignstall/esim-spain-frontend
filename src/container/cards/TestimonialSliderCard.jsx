@@ -24,7 +24,7 @@ const TestimonialSliderCard = () => {
     ],
     appendDots: (dots) => (
       <div style={{ bottom: "-40px" }}>
-        <ul style={{ margin: "0px" }}>
+        <ul className={'p-0'} style={{ margin: "0px" }}>
           {dots.map((dot, index) => (
             <li
               key={index}
@@ -32,24 +32,18 @@ const TestimonialSliderCard = () => {
             >
               {dot.props.className.includes("slick-active") ? (
                 <span
-                  className="dot-active"
+                  className="dot-active dot-btn"
                   style={{
                     backgroundColor: "#C09D5E",
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    display: "inline-block",
+                    borderRadius: '50%'
                   }}
                 ></span>
               ) : (
                 <span
-                  className="dot-inactive"
+                  className="dot-inactive dot-btn"
                   style={{
-                    backgroundColor: "#FFFFFF38", // Inactive dot color
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    display: "inline-block",
+                    backgroundColor: "#FFFFFF38",
+                    borderRadius: '50%',
                   }}
                 ></span>
               )}
@@ -64,7 +58,7 @@ const TestimonialSliderCard = () => {
     <Slider {...settings}>
       {testimonialData.map((item) => (
         <div
-          className={`flex bg-[#454545] border-[1px] border-[#EAEAEA] rounded-[14px] p-5`}
+          className={`flex bg-[#454545] border-[1px] border-[#EAEAEA] rounded-[14px] p-4`}
           key={item.id}
         >
           <div className="mb-3 flex items-center justify-between">
@@ -92,7 +86,7 @@ const TestimonialSliderCard = () => {
             <div className="text-white text-xl">{item.user.platform}</div>
           </div>
           <div
-            className="text-white text-xs leading-6 ml-[52px]  gap-2"
+            className="text-white text-xs leading-6 ml-[52px] gap-2"
             dangerouslySetInnerHTML={{ __html: `${item.review}` }}
           ></div>
         </div>

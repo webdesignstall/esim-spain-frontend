@@ -16,12 +16,12 @@ const testimonialData = [
     id: "sdfsdifgsdo57352hdjfjng9sdfgjosdifg",
     user: {
       name: "Konstantin Hilverth",
-      designation: "CEO Artikuno E-Commerce",
+      designation: "CEO Artikuno",
       profileImage: "",
       platform: FaGooglePlay,
     },
     review:
-      "<p>The implementation of my ideas was extremely quick and uncomplicated. If there were any difficulties, they persistently searched for the supposed error until everything worked perfectly - absolutely great. I would be delighted to work with you again!</p> <p>If there were any difficulties, they persistently searched for the supposed error until everything worked perfectly - absolutely great.</p>",
+      "The implementation of my ideas was extremely quick and uncomplicated. - absolutely great.",
   },
   {
     id: "sdfsdifgsdog857352hdjfjng9sdfgjosdifg",
@@ -38,12 +38,12 @@ const testimonialData = [
     id: "sdifgsdo57352hdjfjng9sdfgjosdifg",
     user: {
       name: "Jagdish Bajaj",
-      designation: "Heade of date Science at plate",
+      designation: "Head of date Science",
       profileImage: "",
       platform: FaGooglePlay,
     },
     review:
-      "Builder provides an easy way for us to host our models, iterate on them, and experiment without worrying about any of the DevOps involved. Out of the way  problem.",
+      "Builder provides an easy way for us to host our models, iterate on them, and experiment without worrying about any of the DevOps involved.",
   },
   {
     id: "sdfsifgsdo57352hdjfjng9sdfgjosdi",
