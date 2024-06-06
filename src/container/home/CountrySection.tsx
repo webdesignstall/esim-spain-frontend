@@ -9,9 +9,9 @@ const CountrySection = ({ countries }: { countries: any[] }) => {
         zIndex: 1,
         boxShadow: "0px -10px 100px 0px rgba(0, 0, 0, 0.8)",
       }}
-      className="custom-continer-inner pt-24 pb-28 px-1 bg-[#1F1B17] lg:-mt-24 mt-28 lg:rounded-3xl relative"
+      className="custom-continer-inner pt-8 md:pt-24 pb-8 md:pb-16 md:pb-28 px-1 bg-[#1F1B17] lg:-mt-24 mt-28 lg:rounded-3xl relative"
     >
-      <h2 className="lg:text-5xl text-3xl lg:leading-[60px] font-medium text-white text-center py-10">
+      <h2 className="text-[16px] sm:text-xl lg:text-5xl  md:text-3xl lg:leading-[60px] font-medium text-white md:text-center py-2 md:py-10">
         Millions of People Stay Connected <br /> With Data eSims for 190+
         Countries
       </h2>

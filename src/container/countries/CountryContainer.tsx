@@ -9,7 +9,7 @@ type Props = {
 const CountryContainer = ({ filteredCountries, countries }: Props) => {
   return (
     <>
-      <div className="flex flex-wrap lg:gap-5 gap-2 mt-20 justify-center">
+      <div className="flex flex-wrap lg:gap-5 gap-2 mt-10 sm:mt-20 justify-center">
         {filteredCountries && filteredCountries?.length > 0
           ? filteredCountries?.map((country, index) => (
               <CountryCard country={country} key={index} />
