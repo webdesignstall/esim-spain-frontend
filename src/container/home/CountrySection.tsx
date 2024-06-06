@@ -19,7 +19,7 @@ const CountrySection = ({ countries }: { countries: any[] }) => {
       <CountryContainer countries={countries} />
       <div className="flex justify-center items-center">
         <Link href={"/countries"}>
-          <button className="bg-[#C09D5E] rounded-full font-medium mb-10 -mt-5 px-6 py-3 flex gap-2 items-center text-white">
+          <button className="bg-[#C09D5E] rounded-full font-medium mb-10 -mt-5 px-6 py-3 flex gap-2 items-center text-white text-[13px] md:text-[16px]">
             Show 150+ countries
           </button>
         </Link>
