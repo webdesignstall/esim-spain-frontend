@@ -53,14 +53,14 @@ const Navbar = () => {
       {/* mobile design  */}
       <div className="lg:hidden block mt-2 md:mt-0">
         <div className="flex items-center justify-between">
-          <div>
+          <Link href={'/'}>
             <Image
               height={80}
               width={80}
               src={"../../../assets/pirateLogo.svg"}
               alt="logo"
             />
-          </div>
+          </Link>
           <div className="flex">
             <Link href={'/auth'} className="mr-5 sm:mr-7">
               <svg width="50" height="35" viewBox="0 0 72 50" fill="none" xmlns="http://www.w3.org/2000/svg">
