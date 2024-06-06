@@ -22,22 +22,22 @@ const VerticalUITimeline = () => {
                 </>
               )}
             </TimelineSeparator>
-            <TimelineContent className="py-20 -mt-20">
-              <h3 className="text-[28px] lg:w-[520px] w-full mb-3 leading-8 text-white">
+            <TimelineContent className="pt-20 -mt-20">
+              <h3 className="text-[17px]  md:text-[28px] lg:w-[520px] w-full mb-3 leading-8 text-white">
                 {item?.title}
               </h3>
-              <h5 className="text-[14px] text-[#D2D2D2]">
+              <h5 className=" text-[13px] md:text-[14px] text-[#D2D2D2]">
                 {item?.description}
               </h5>
             </TimelineContent>
           </TimelineItem>
         ))}
       </Timeline>
-      <div className="flex justify-center items-center">
-        <button className="bg-[#C09D5E] rounded-full font-medium px-6 py-3 flex gap-2 items-center text-white">
-          Check Your Device Compatibility
-        </button>
-      </div>
+      {/*<div className="flex justify-center items-center">*/}
+      {/*  <button className="bg-[#C09D5E] rounded-full font-medium px-6 py-3 flex gap-2 items-center text-white">*/}
+      {/*    Check Your Device Compatibility*/}
+      {/*  </button>*/}
+      {/*</div>*/}
     </div>
   );
 };
