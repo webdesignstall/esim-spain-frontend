@@ -55,11 +55,10 @@
     "react-qr-hooks": "^1.0.7",
     "react-redux": "^8.0.5",
     "react-scroll": "^1.8.8",
-    "react-slick": "^0.30.2",
     "react-use": "^17.4.0",
     "redux": "^4.2.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^9.3.2",
+    "swiper": "^11.1.4",
     "use-query-params": "^2.2.1",
     "yup": "^1.0.0"
   },
