@@ -78,3 +78,9 @@ button {
         height: 16px !important;
     }
 }
+
+@media screen and (min-width: 769px) {
+    .slick-slide > div {
+        margin: 0 10px
+    }
+}

@@ -27,14 +27,14 @@ const ChoosePirateSim = () => {
           />
           <div className="flex lg:gap-10 gap-5 lg:mt-56">
             <PirateMobileChooseCard
-              icon={"./assets/icons/pirate-choose/pirateChooseImageTwo.svg"}
+              icon={"/assets/icons/pirate-choose/pirateChooseImageTwo.svg"}
               title={"Affordable and <br /> Transparent"}
               subTitle={
                 "Process-oriented approach for delivering optimal results"
               }
             />
             <PirateMobileChooseCard
-              icon={"./assets/icons/pirate-choose/pirateChooseImageThree.svg"}
+              icon={"/assets/icons/pirate-choose/pirateChooseImageThree.svg"}
               title={"Fast and <br /> Secure"}
               subTitle={
                 "Process-oriented approach for delivering optimal results"
@@ -42,7 +42,7 @@ const ChoosePirateSim = () => {
             />
           </div>
           <PirateMobileChooseCard
-            icon={"./assets/icons/pirate-choose/pirateChooseImageFour.svg"}
+            icon={"/assets/icons/pirate-choose/pirateChooseImageFour.svg"}
             title={"Instant <br /> Connectivity"}
             subTitle={
               "Process-oriented approach for delivering optimal results"
@@ -51,7 +51,7 @@ const ChoosePirateSim = () => {
           <div className="lg:block hidden absolute top-0 right-[45%]">
             <img
               className="h-32 w-32"
-              src={"./assets/footerLogo.png"}
+              src={"/assets/footerLogo.png"}
               alt="logo image"
             />
           </div>
@@ -72,7 +72,7 @@ const ChoosePirateSim = () => {
           </div>
           <div className="my-5 w-[200px]">
             <PirateMobileChooseCard
-              icon={"./assets/icons/pirate-choose/pirateChooseImageTwo.svg"}
+              icon={"/assets/icons/pirate-choose/pirateChooseImageTwo.svg"}
               title={"Affordable and <br /> Transparent"}
               subTitle={
                 "Process-oriented approach for delivering optimal results"
@@ -82,7 +82,7 @@ const ChoosePirateSim = () => {
           </div>
           <div className="my-5 w-[200px]">
             <PirateMobileChooseCard
-              icon={"./assets/icons/pirate-choose/pirateChooseImageThree.svg"}
+              icon={"/assets/icons/pirate-choose/pirateChooseImageThree.svg"}
               title={"Fast and <br /> Secure"}
               subTitle={
                 "Process-oriented approach for delivering optimal results"
@@ -92,7 +92,7 @@ const ChoosePirateSim = () => {
           </div>
           <div className="my-5 w-[200px]">
             <PirateMobileChooseCard
-              icon={"./assets/icons/pirate-choose/pirateChooseImageFour.svg"}
+              icon={"/assets/icons/pirate-choose/pirateChooseImageFour.svg"}
               title={"Instant <br /> Connectivity"}
               subTitle={
                 "Process-oriented approach for delivering optimal results"
