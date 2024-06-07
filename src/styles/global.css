@@ -69,6 +69,7 @@ button {
 span.swiper-pagination-bullet {
     background-color: #fff;
 }
+
 @media screen and (max-width: 767px) {
     .simple-section .simple-bottom-left {
         width: auto;
@@ -86,5 +87,11 @@ span.swiper-pagination-bullet {
     .slick-slide > div {
         margin: 0 10px
     }
+   div .search-btn-wrapper {
+        margin-top: 0 !important;
+    }
+   h3.contact-us {
+       margin-top: 0 !important;
+   }
 }
 

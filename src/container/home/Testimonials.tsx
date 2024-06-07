@@ -105,7 +105,7 @@ const Testimonials = () => {
               </div>
               <blockquote>
                 <div
-                  className="text-white text-xs flex flex-col gap-2"
+                  className="text-white flex flex-col gap-2"
                   dangerouslySetInnerHTML={{ __html: largestReview.review }}
                 ></div>
               </blockquote>

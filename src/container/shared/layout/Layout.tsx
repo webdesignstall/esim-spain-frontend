@@ -33,10 +33,9 @@ const Layout: React.FC<ILayoutProps> = ({ children, showHideConfig }) => {
         >
             {!hideDesktopHeader && <DesktopHeader />}
             <div className="flex-grow w-100">{children}</div>
-            <SiteFooter />
             <TabBottom />
             {/* <PAPTrackingClick /> */}
-            <PostAffiliatePro />
+
         </LayoutStyled>
     );
 };
@@ -55,8 +54,7 @@ export const LayoutClean: React.FC<ILayoutProps> = ({
             })}
         >
             <div className="flex-grow w-100">{children}</div>
-            <SiteFooter />
-            <PostAffiliatePro />
+
         </LayoutStyled>
     );
 };
