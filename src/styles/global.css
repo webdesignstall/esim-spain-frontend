@@ -66,6 +66,9 @@ button {
     borderRadius: 50% !important;
     display: inline-block !important;
 }
+span.swiper-pagination-bullet {
+    background-color: #fff;
+}
 @media screen and (max-width: 767px) {
     .simple-section .simple-bottom-left {
         width: auto;
@@ -84,3 +87,4 @@ button {
         margin: 0 10px
     }
 }
+
