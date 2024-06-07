@@ -1,11 +1,7 @@
 /* eslint-disable react/jsx-key */
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { GoDotFill } from "react-icons/go";
 import { useRef, useState } from "react";
-import packageData from "@/constants/packageData";
 import PackageCard from "./PackageCard";
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Pagination } from 'swiper/modules';
