@@ -8,7 +8,7 @@ import { useRef, useState } from "react";
 import packageData from "@/constants/packageData";
 import PackageCard from "./PackageCard";
 
-const PackageCardSlider = ({ packageType }) => {
+const PackageCardSlider = ({ packageType, pack, countryCode }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   let sliderRef = useRef(null);
   const handleNextPack = () => {
@@ -27,6 +27,13 @@ const PackageCardSlider = ({ packageType }) => {
     slidesToScroll: 1,
     variableWidth: true,
     beforeChange: (current, next) => setCurrentSlide(next),
+      responsive: [{
+          breakpoint: 320,
+          settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+          }
+      }]
   };
 
   return (
@@ -37,15 +44,16 @@ const PackageCardSlider = ({ packageType }) => {
         }}
         {...settings}
       >
-        {packageData?.map((pack, index) => (
-          <div key={index} className="mr-3 mb-10 ">
-            <PackageCard pack={pack} packageType={packageType} />
+        {pack?.map((item, index) => (
+          <div key={item?.id} className="mr-3 mb-10 ">
+            <PackageCard countryCode={countryCode} pack={item} packageType={packageType} />
           </div>
         ))}
       </Slider>
       <div className="flex justify-center items-center">
-        {packageData?.map((_, index) => (
+        {pack?.map((_, index) => (
           <GoDotFill
+              key={index}
             className={
               index === currentSlide ? "text-[#C09D5E]" : "text-[#58534980]"
             }
