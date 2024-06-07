@@ -79,9 +79,9 @@ const PackageList = ({ bundles, countryCode }: Props) => {
         zIndex: 1,
         boxShadow: "0px -10px 100px 0px rgba(0, 0, 0, 0.8)",
       }}
-      className="2xl:max-w-[70%] lg:max-w-[85%]  mx-auto xl:px-20 lg:py-10 p-5 bg-[#1F1B17] lg:-mt-24 mt-28 lg:rounded-3xl relative"
+      className="custom-continer-inner xl:px-20 lg:pt-10 p-5 bg-[#1F1B17] lg:-mt-24 mt-28 lg:rounded-3xl relative"
     >
-      <div className="flex items-center lg:gap-5 gap-3 justify-center">
+      <div className="flex items-center lg:mt-12 lg:gap-5 gap-3 justify-center">
         <img
           className="lg:w-16 w-10 lg:h-12 h-8 rounded-lg"
           src={`https://flagcdn.com/${countryCode?.toLowerCase()}.svg`}
