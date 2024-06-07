@@ -139,7 +139,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
             setOpenCheckoutSuccessModal({
               open: true,
               order: fetchOrder as any,
-            });
+            })
           }}
         >
           Open Modal
