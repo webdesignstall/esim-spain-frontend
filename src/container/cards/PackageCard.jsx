@@ -43,6 +43,7 @@ const PackageCard = ({ pack, country, countryCode  }) => {
     }
   };
 
+  console.log('dataAmout', pack?.dataAmount)
   return (
     <div className="text-white border-slate-500 rounded-lg lg:mr-0 mr-3 bg-[#454545]">
       <div className="overflow-hidden h-[80px] relative">

@@ -133,7 +133,12 @@ const PackageList = ({ bundles, countryCode }: Props) => {
         )}
       </div>
       <div className="md:hidden block">
-        <PackageCardSlider packageType={packageType} />
+
+        <PackageCardSlider countryCode={countryCode} pack={ filterPackages?.length > 0 ? filterPackages : packages} packageType={packageType} />
+
+
+
+
       </div>
     </div>
   );
