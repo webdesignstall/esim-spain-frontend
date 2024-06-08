@@ -62,7 +62,7 @@ const Navbar = () => {
             />
           </Link>
           <div className="flex">
-            <Link href={'/auth'} className="mr-5 sm:mr-7">
+            <Link href={'/signin'} className="mr-5 sm:mr-7">
               <svg width="50" height="35" viewBox="0 0 72 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.779297" y="0.617981" width="70.6107" height="48.5449" rx="24.2724" fill="white"
                       fillOpacity="0.19"/>

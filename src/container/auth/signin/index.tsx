@@ -7,7 +7,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import signUpImage from "../../../assets/images/signinBgImage.png";
 import logo from "../../../assets/pirateLogo.svg";
 import GoogleSignIn from "../socials/GoogleSignIn";
-import FacebookSignIn from "../socials/FacebookSignIn";
 import styles from "./signin.module.css";
 import AuthApi from "../../../apis/auth/AuthApi";
 import { useDispatch } from "react-redux";
@@ -48,7 +47,10 @@ const SignInPage = () => {
             alt="login image"
           />
           <Link href={"/"}>
-            <Image className="absolute top-10 left-10" src={logo} alt="logo" />
+            <Image
+                width={120}
+                height={120}
+                className="absolute top-10 left-10" src={'/assets/pirateLogo.svg'} alt="logo" />
           </Link>
           <p className="text-white absolute bottom-10 left-10">
             &copy; {new Date().getFullYear()} , eSIM Powered by Pirate Mobile
@@ -85,21 +87,22 @@ const SignInPage = () => {
                 </p>
               </div>
             </div>
-            <h4 className="lg:text-4xl text-2xl mt-20 mb-10 text-white font-semibold">
+            <h4 className="lg:text-4xl text-2xl mt-20 text-white font-semibold">
               Sign In
             </h4>
-            <div className="flex w-full lg:flex-row flex-col gap-5 items-center justify-between mb-12">
+            <div className="flex w-full flex-col gap-3 justify-between mt-10">
               <div className="lg:w-7/12 w-full">
-                <GoogleSignIn />
+                <GoogleSignIn/>
               </div>
-              <div className="lg:w-5/12 w-full">
-                <FacebookSignIn />
-              </div>
+              <p className="text-[#D2D2D2] text-sm mb-4 ml-2">
+                Or sign in using your email address
+              </p>
+              {/*<div className="lg:w-5/12 w-full">*/}
+              {/*  <FacebookSignIn />*/}
+              {/*</div>*/}
             </div>
-            <hr className="w-10 lg:mx-0  mx-auto border-[#C0BDCC]" />
-            <p className="text-[#D2D2D2] text-sm lg:text-start text-center mt-5 mb-10">
-              Or sign in using your email address
-            </p>
+
+
             <form className="w-full" onSubmit={handleSubmit(handleSignIn)}>
               <div className="flex justify-between lg:flex-row flex-col gap-4 w-full">
                 <div className="flex flex-col w-full">
@@ -166,18 +169,18 @@ const SignInPage = () => {
                   )}
                 </div>
               </div>
-              <div className="flex gap-5 mt-5 items-center">
-                <input type="checkbox" className="text-white" />
-                <label className="text-white" htmlFor="remember">
-                  Remember me
-                  <Link
-                    className="text-[#C09D5E] ml-2 hover:underline"
-                    href={"/forget-password"}
-                  >
-                    Forget Password
-                  </Link>
-                </label>
-              </div>
+              {/*<div className="flex gap-2 mt-3 items-center">*/}
+              {/*  <input type="checkbox" className="text-white" />*/}
+              {/*  <label className="text-white text-sm" htmlFor="remember">*/}
+              {/*    Remember me*/}
+              {/*    <Link*/}
+              {/*      className="text-[#C09D5E] ml-2 hover:underline"*/}
+              {/*      href={"/forget-password"}*/}
+              {/*    >*/}
+              {/*      Forget Password*/}
+              {/*    </Link>*/}
+              {/*  </label>*/}
+              {/*</div>*/}
               <div className="mt-10">
                 <button
                   type="submit"
