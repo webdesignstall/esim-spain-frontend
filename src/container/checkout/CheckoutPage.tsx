@@ -244,7 +244,7 @@ const CheckoutPage: React.FC<ICheckoutPageProps> = ({ id }) => {
       className="2xl:max-w-[75%] lg:max-w-[85%] mx-auto xl:px-20 lg:py-10 p-5 bg-[#1F1B17] lg:-mt-[500px]  lg:rounded-xl relative"
     >
       <PageHeader title={Messages.yourOrder} showLeftButton={false} />
-      <CheckoutStyled className=" px-4 z-10 relative flex flex-col items-center">
+      <CheckoutStyled className=" md:px-4 z-10 relative flex flex-col items-center">
         {map(userCart, (item, index) => {
           return <BundleItem bundle={item} showRadio={false} />;
         })}
