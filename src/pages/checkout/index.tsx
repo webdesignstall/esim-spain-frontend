@@ -16,8 +16,13 @@ export default Checkout;
 //@ts-ignore
 Checkout.getLayout = function getLayout(page) {
   return (
-    <CheckoutLayout>
-      <LayoutClean showHideConfig={{ hideLogo: true }}>{page}</LayoutClean>;
-    </CheckoutLayout>
-  );
+      <div className={'checkout-page'}>
+          <CheckoutLayout>
+              <LayoutClean showHideConfig={{hideLogo: true}}>
+                  {page}
+              </LayoutClean>
+            </CheckoutLayout>
+      </div>
+)
+    ;
 };

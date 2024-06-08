@@ -184,6 +184,9 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
     }, [dataAmount, provider]);
     const [openDetailModal, setOpenDetailModal] = useState(false);
 
+
+    console.log('bundle', bundle);
+
     return (
         <Fragment>
             <BundleItemStyled
@@ -233,6 +236,12 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
                         <div className={rowClass}>
                             <div className="mr-1 text-gold  text-base">
                                 {Messages.duration} :{" "}
+                            </div>
+                            <div className="font-medium text text-gray-300">{`${duration}  ${Messages.days}`}</div>
+                        </div>
+                        <div className={rowClass}>
+                            <div className="mr-1 text-gold  text-base">
+                               Coverage :
                             </div>
                             <div className="font-medium text text-gray-300">{`${duration}  ${Messages.days}`}</div>
                         </div>
@@ -343,6 +352,7 @@ export const BundleDetailModal: React.FC<IBundleDetailModalProps> = ({
                             {Messages.data} :{" "}
                         </div>
                         <div className="font-semibold text-gray-300">
+
                             {dataDisplay}
                         </div>
                     </div>

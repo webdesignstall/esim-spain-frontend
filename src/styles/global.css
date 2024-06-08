@@ -69,7 +69,12 @@ button {
 span.swiper-pagination-bullet {
     background-color: #fff;
 }
-
+.checkout-page .layout-container{
+    min-height: 40vh !important
+}
+.checkout-page footer .custom-continer-inner {
+    position: absolute;
+}
 @media screen and (max-width: 767px) {
     .simple-section .simple-bottom-left {
         width: auto;
