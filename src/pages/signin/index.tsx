@@ -3,11 +3,7 @@ import AuthLayout from "@/container/layouts/AuthLayout";
 import { ReactElement } from "react";
 
 const Signin = () => {
-  return (
-    <div>
-      <SignInPage />
-    </div>
-  );
+  return <SignInPage />
 };
 
 export default Signin;

@@ -48,7 +48,10 @@ const SignUpPage = () => {
             alt="login image"
           />
           <Link href={"/"}>
-            <Image className="absolute top-10 left-10" src={logo} alt="logo" />
+            <Image
+                width={120}
+                height={120}
+                className="absolute top-10 left-10" src={'/assets/pirateLogo.svg'} alt="logo" />
           </Link>
           <p className="text-white absolute bottom-10 left-10">
             &copy; {new Date().getFullYear()} , eSIM Powered by Pirate Mobile
@@ -85,21 +88,22 @@ const SignUpPage = () => {
                 </p>
               </div>
             </div>
-            <h4 className="lg:text-4xl text-2xl mt-20 mb-10 text-white font-semibold">
+            <h4 className="lg:text-4xl text-2xl mt-20 text-white font-semibold">
               Create Your Account
             </h4>
-            <div className="flex w-full lg:flex-row flex-col gap-5 items-center justify-between mb-12">
+            <div className="flex w-full flex-col gap-2  justify-between mb-12 mt-7">
               <div className="lg:w-7/12 w-full">
-                <GoogleSignIn />
+                <GoogleSignIn/>
               </div>
-              <div className="lg:w-5/12 w-full">
-                <FacebookSignIn />
-              </div>
+              {/*<div className="lg:w-5/12 w-full">*/}
+              {/*  <FacebookSignIn />*/}
+              {/*</div>*/}
+              <p className="text-[#D2D2D2] text-sm mt-2 mb-2 ml-2">
+                Or sign in using your email address
+              </p>
             </div>
-            <hr className="w-10 lg:mx-0  mx-auto border-[#C0BDCC]" />
-            <p className="text-[#D2D2D2] text-sm lg:text-start text-center mt-5 mb-10">
-              Or sign in using your email address
-            </p>
+            {/*<hr className="w-10 lg:mx-0  mx-auto border-[#C0BDCC]" />*/}
+
             <form className="w-full" onSubmit={handleSubmit(handleSignUp)}>
               <div className="flex justify-between lg:flex-row flex-col gap-4 mb-4 w-full">
                 <div className="flex flex-col w-full">
@@ -212,13 +216,13 @@ const SignUpPage = () => {
                   )}
                 </div>
               </div>
-              <div className="flex gap-5 mt-5 items-center">
+              <div className="flex gap-2 mt-3 items-center">
                 <input type="checkbox" className="text-white" />
                 <label className="text-white" htmlFor="remember">
                   I accept the
                   <Link
                     className="text-[#C09D5E] ml-2 hover:underline"
-                    href={"/terms-and-conditions"}
+                    href={"/term-conditions"}
                   >
                     Terms and Conditions
                   </Link>
