@@ -13,13 +13,13 @@ const Footer = () => {
     <footer className=" bg-[#1F1B17] lg:py-10 p-2 md:p-5">
       <div className="custom-continer-inner pt-10 md:pt-0 lg:-mt-32 -mt-20">
         <div className="lg:block hidden">
-          <Link href="/">
+          <Link className={'inline-block'} href="/">
             <Image src={logo} alt="Logo" />
           </Link>
         </div>
         <div className="lg:hidden block ">
           <div className="flex items-center justify-center">
-            <Link href="/">
+            <Link className='inline-block' href="/">
             <Image className="w-[113px] h-[113px]" src={logo} alt="Logo" />
             </Link>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
               <h3 className="text-[20px] font-medium text-white mt-4 contact-us">
                 Contact us
               </h3>
-              <ul className="text-[16px] text-[#C09D5E] p-0 mt-2 md:mt-7">
+              <ul className="text-[16px] text-[#C09D5E] p-0  md:mt-7  md:mt-7">
                 <li className="">info@piratemobile.gg</li>
               </ul>
             </div>
