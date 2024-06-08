@@ -72,9 +72,7 @@ span.swiper-pagination-bullet {
 .checkout-page .layout-container{
     min-height: 40vh !important
 }
-.checkout-page footer .custom-continer-inner {
-    position: absolute;
-}
+
 @media screen and (max-width: 767px) {
     .simple-section .simple-bottom-left {
         width: auto;
@@ -98,5 +96,6 @@ span.swiper-pagination-bullet {
    h3.contact-us {
        margin-top: 0 !important;
    }
+
 }
 
