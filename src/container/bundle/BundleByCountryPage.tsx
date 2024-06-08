@@ -19,6 +19,7 @@ import PriceTag from "../shared/items/PriceTag";
 import { useSearchParam } from "react-use";
 import AppLink from "@/components/link/AppLink";
 import PriceConverter from "@/utils/convertPrice";
+import countryCode from "@/pages/packages/[countryCode]";
 
 export interface IBundleByCountryPageProps {
     countryCode: string;
@@ -184,9 +185,14 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
     }, [dataAmount, provider]);
     const [openDetailModal, setOpenDetailModal] = useState(false);
 
+    // @ts-ignore
+    const isolow = bundle?.bundleData?.countries[0]?.iso?.toLowerCase();
+    // @ts-ignore
+    const countryName = bundle?.bundleData?.countries[0]?.name;
+    // @ts-ignore
+    const isUnmited = bundle?.bundleData?.unlimited;
 
-    console.log('bundle', bundle);
-
+    console.log('bundle', bundle)
     return (
         <Fragment>
             <BundleItemStyled
@@ -223,14 +229,24 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
                     )}
                     <div className="w-full ml-3">
                         <div className="flex-center-y text-lg text-gold font-semibold">
-                            <div className="ml-1">{id}</div>
+                            <div className="ml-1">
+                                { isUnmited ? (
+                                    <span>Unlimited </span>
+
+                                ) : (
+                                    <span>{bundle?.dataAmount / 1000} GB </span>
+                                )}
+                                {bundle?.duration} Days
+                            </div>
                         </div>
                         <div className={rowClass}>
                             <div className="mr-1 text-gold text-base">
                                 {Messages.data} :{" "}
                             </div>
                             <div className="font-medium text text-gray-300">
-                                {dataDisplay}
+                                {
+                                    isUnmited ? 'Unlimited' :  dataDisplay
+                                }
                             </div>
                         </div>
                         <div className={rowClass}>
@@ -241,9 +257,12 @@ export const BundleItem: React.FC<IBundleItemProps> = ({
                         </div>
                         <div className={rowClass}>
                             <div className="mr-1 text-gold  text-base">
-                               Coverage :
+                               Coverage : {' '}
                             </div>
-                            <div className="font-medium text text-gray-300">{`${duration}  ${Messages.days}`}</div>
+                            <div className="font-medium text text-gray-300 flex gap-1">
+                                <img width={16} src={`https://hatscripts.github.io/circle-flags/flags/${isolow}.svg`} alt={countryName} />
+                                <span>{countryName}</span>
+                            </div>
                         </div>
                         {/* {speed?.length && (
                         <div className={rowClass}>

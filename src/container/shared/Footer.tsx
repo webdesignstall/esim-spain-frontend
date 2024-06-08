@@ -10,10 +10,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className=" bg-[#1F1B17] lg:py-10 p-2 md:p-5">
+    <footer className="bg-[#1F1B17] lg:py-10 p-2 md:p-5">
       <div className="custom-continer-inner pt-10 md:pt-0 lg:-mt-32 -mt-20">
         <div className="lg:block hidden">
-          <Link className={'inline-block'} href="/">
+          <Link className={'inline-block relative'} href="/">
             <Image src={logo} alt="Logo" />
           </Link>
         </div>
