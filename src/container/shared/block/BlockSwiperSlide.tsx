@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+// import { Autoplay, Navigation, Pagination } from "swiper";
+import {Autoplay, Navigation, Pagination} from "swiper/types/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -38,7 +39,6 @@ const BlockSwiperSlide: React.FC<IBlockSwiperSlideProps> = ({
                 }}
                 speed={3000}
                 onSlideChange={() => console.log("slide change")}
-                onSwiper={(swiper) => console.log(swiper)}
                 modules={[Autoplay, Pagination, Navigation]}
                 {...swiperProps}
             >

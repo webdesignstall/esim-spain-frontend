@@ -61,7 +61,7 @@ const ProfilePage = () => {
                   <IoIosArrowForward />
                 </Button>
               </Link>
-              <Link className="w-full" href={"/settings"}>
+              <Link className="w-full" href={"/setting"}>
                 <Button
                   style={{
                     backgroundColor: "#454545",
