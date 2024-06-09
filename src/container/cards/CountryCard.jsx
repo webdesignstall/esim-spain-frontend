@@ -23,21 +23,24 @@ const CountryCard = ({ country }) => {
                   alt="country flag"
               />
             </div>
-            <div className="mb-1 md:mb-4 lg:mt-10 -mt-4">
-              <h4 className=" leading-5 text-[14px] md:text-md nt-5 lg:text-2xl text-white mb-2 md:mt-14">{country?.name}</h4>
-              <h6 className="text-[12px] lg:text-xl text-[#FFFFFF]">Starts at $3.5</h6>
-            </div>
-
-            <div
-                className='flex flex-col items-center justify-center'>
-              <div>
-
-                  <button className="bg-[#FFFFFF69] text-black group-hover:bg-white p-2 rounded-full">
-                    <FaChevronRight className={'text-sm sm:text-lg'} />
+              <div className="mb-1 md:mb-4 lg:mt-10 -mt-4">
+                  <h4 className=" leading-5 text-[14px] md:text-md nt-5 lg:text-2xl text-white mb-2 md:mt-10">{country?.name}</h4>
+                  <button  className="bg-[#FFFFFF69] w-10 h-10 text-black group-hover:bg-white p-2 rounded-full">
+                      <FaChevronRight className={'text-sm sm:text-lg'}/>
                   </button>
 
               </div>
-            </div>
+
+            {/*  <div*/}
+            {/*      className='flex flex-col items-center justify-center'>*/}
+            {/*      <div>*/}
+
+            {/*          <button className="bg-[#FFFFFF69] text-black group-hover:bg-white p-2 rounded-full">*/}
+            {/*        <FaChevronRight className={'text-sm sm:text-lg'} />*/}
+            {/*      </button>*/}
+
+            {/*  </div>*/}
+            {/*</div>*/}
 
           </div>
 
