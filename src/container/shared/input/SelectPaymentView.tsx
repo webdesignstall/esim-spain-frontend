@@ -82,6 +82,7 @@ const SelectPaymentView: React.FC<ISelectPaymentViewProps> = ({
 
         const orderSer = createdOrderSer?.data?.data?.data;
         setActiveOrder(orderSer);
+
         const payPalOrderPayload = {
             purchase_units: [
                 {
@@ -99,9 +100,14 @@ const SelectPaymentView: React.FC<ISelectPaymentViewProps> = ({
                         ? mapBundleToPayPalItems(purchasingItems)
                         : [],
                     custom_id: customerId,
+                    payee: {
+                        "email_address": orderSer?.customer?.email  // Replace with actual merchant email
+                    }
                 },
             ],
         };
+
+
         return actions.order.create(payPalOrderPayload);
     };
 

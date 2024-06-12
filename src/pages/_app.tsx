@@ -30,6 +30,8 @@ export type MattressAppProps = AppProps & {
   };
 };
 
+// debugger
+
 const initialOptions = {
   "client-id": CONFIG.PAYPAL_CLIENT_ID,
   currency: "USD",
